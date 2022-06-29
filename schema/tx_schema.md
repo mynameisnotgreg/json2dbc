@@ -9,7 +9,7 @@ Signal size can be automatically calculated or explicitly specified. Cannot (cur
         "signals": {
             "signal_name": {
                 "resolution": 1,
-                "signed": 0,
+                "signed": false,
                 "min": 0
             }
         }

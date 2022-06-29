@@ -1,4 +1,4 @@
-# JSON
+# JSON to DBC
 
 This high-level schema represents a subset of the Vector DBC standard.
 
@@ -23,4 +23,4 @@ bus
 
 Note that this system assumes that none of the ECUs are sending the same message ID.
 
-# Codegen
+# C Codegen

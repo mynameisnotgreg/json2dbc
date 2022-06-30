@@ -1,0 +1,9 @@
+{
+    "JANE_fish": {
+        "TUNA": -1,
+        "SALMON": 0,
+        "ALBACORE": 1,
+        "TROUT": 2,
+        "MACKREL": 99
+    }
+}

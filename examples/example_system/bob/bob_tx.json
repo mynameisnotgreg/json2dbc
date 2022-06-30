@@ -1,5 +1,5 @@
 {
-    "potato_salad": {
+    "BOB_potato_salad": {
         "message_id": 10,
         "signals": {
             "potato": {
@@ -8,20 +8,28 @@
                 "units": "P"
             },
             "salad": {
-                "bits": 3,
-                "signed": true
+                "bits": 3
             }
         }
     },
-    "chicken_salad": {
+    "BOB_chicken_egg_salad": {
+        "cycle_time": 10,
         "message_id": 20,
         "signals": {
             "chicken": {
-                "bits": 14
+                "min": -10,
+                "bits": 3
+            },
+            "egg": {
+
             },
             "salad": {
-                "max": 100,
-                "endianness": "big"
+                "min": -500,
+                "max": 1000,
+                "offset": 500,
+                "bits": 12,
+                "endianess": "big",
+                "sig_start_val": 123
             }
         }
     }

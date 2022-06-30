@@ -73,7 +73,8 @@ Whereas this is illegal, even if it correctly describes the bounds of the enum:
 
 ## Signal size
 
-Define any valid combination of `min`, `max`, `bits`, and `offset`:
+Define any valid combination of `min`, `max`, `bits`, and `offset`. To generate optimally sized signals, provide as little information as possible.
+
 ```json
 {
     "message_name": {
@@ -120,12 +121,16 @@ Override default endianness - you can override this at the message level, signal
 
 ## Attributes
 
-Generate `GenSigStartValue` and `GenMsgCycleTime` attributes for a message:
+Generate `GenSigStartValue` and `GenMsgCycleTime` attributes for a message/signal:
 ```json
 {
     "message_name": {
-        "sig_start_val": 99,
         "cycle_time": 10,
+        "signals": {
+            "signal_name": {
+                "sig_start_val": 99
+            }
+        }
     }
 }
 ```
@@ -144,3 +149,7 @@ Define units for a signal:
     }
 }
 ```
+
+## Notes
+
+Chose not to auto-prefix messages as it would be difficult to resolve identically named messages (after the prefix) in the RX JSON (eg. `BOB_sandwich` vs. `JANE_sandwich`).

@@ -1,0 +1,9 @@
+{
+    "eggs": {
+        "SUNNY_SIDE_UP": 0,
+        "OVER_EASY": 1,
+        "SCRAMBLED": 2,
+        "POACHED": 3,
+        "OMELETTE": 4
+    }
+}

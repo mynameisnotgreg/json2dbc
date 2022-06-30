@@ -36,37 +36,50 @@ Given the default fields there are two options of absolute minimum TX message de
 ```
 
 ## Associate an enum definition with a signal
-- Note that the required signal size is automatically determined so it's illegal to define `min` and/or `max`.
+Note that the required signal size/sign is automatically determined, even if the enum is negative. It's illegal to override this by defining `min`, `max` and/or `signed`.
+
+Note that this is legal:
 ```json
 {
     "message_name": {
         "signals": {
-            "signal_name_1": { // LEGAL
+            "signal_name_1": {
                 "enum": "example_enum_1"
-            },
-            "signal_name_2": { // ILLEGAL
-                "enum": "example_enum_2",
-                "min": 0,
-                "max": 3
             }
         }
     }
 }
 ```
 
-## Other
+Whereas this is illegal:
+```json
+{
+    "message_name": {
+        "signals": {
+            "signal_name_2": {
+                "enum": "example_enum_2",
+                "min": -3,
+                "max": 3,
+                "signed": true
+            }
+        }
+    }
+}
+```
 
-Can define (`min` and `max`) OR (`bits`), but not both. The following is legal:
+## Signal size
+
+Can define (`min` and `max`) OR (`bits`), but not both. Note that this is legal:
 ```json
 {
     "message_name": {
         "signals": {
             "signal_name_1": {
                 "min": 0,
-                "max": 1
+                "max": 10
             },
             "signal_name_2": {
-                "bits": 1
+                "bits": 4
             }
         }
     }
@@ -80,13 +93,15 @@ Whereas this is illegal:
         "signals": {
             "signal_name_3": {
                 "min": 0,
-                "max": 1,
-                "bits": 1
+                "max": 10,
+                "bits": 4
             }
         }
     }
 }
 ```
+
+## Other
 
 Generate `GenSigStartValue` and `GenMsgCycleTime` attributes for a message:
 ```json

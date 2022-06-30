@@ -19,6 +19,7 @@ bus
 |     ecu_1_tx.json
 | --
 | shared_enum.json
+| system.json
 ```
 
 Note that this system assumes that none of the ECUs are sending the same message ID.

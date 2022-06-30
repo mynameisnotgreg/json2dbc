@@ -6,3 +6,5 @@ Define message ID range - this is checked against TX message IDs:
     "message_id_max": 200
 }
 ```
+
+Ranges for different ECUs can be overlapping.

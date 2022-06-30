@@ -1,0 +1,27 @@
+{
+    "potato_salad": {
+        "message_id": 10,
+        "signals": {
+            "potato": {
+                "min": -30000,
+                "max": 30000,
+                "units": "P"
+            },
+            "salad": {
+                "bits": 3,
+                "signed": true
+            }
+        }
+    },
+    "chicken_salad": {
+        "message_id": 20,
+        "signals": {
+            "chicken": {
+                "bits": 14
+            },
+            "salad": {
+                "max": 100
+            }
+        }
+    }
+}

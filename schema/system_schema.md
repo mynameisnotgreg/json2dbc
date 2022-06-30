@@ -5,7 +5,7 @@ Define the default receiver to handle the case where no receiver is defined for 
 }
 ```
 
-Optional - define the bus speed in kbits/s.
+Optional - define the bus speed in kbits/s. This is not defined by default.
 ```json
 {
     "bus_speed": 500
@@ -19,7 +19,7 @@ Optional - define the default endianness to be `"little"` or `"big"`. This is `"
 }
 ```
 
-Optional - define the attribute ranges and default values:
+Optional - define the attribute ranges and default values. These are not defined by default.
 ```json
 {
     "cycle_time_min": 0,
@@ -30,4 +30,3 @@ Optional - define the attribute ranges and default values:
     "sig_start_val_default": 0
 }
 ```
-

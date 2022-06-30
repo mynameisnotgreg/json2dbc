@@ -21,14 +21,16 @@
                 "bits": 3
             },
             "egg": {
-
+                "enum": "SHARED_eggs"
             },
             "salad": {
+                "resolution": 0.25,
                 "min": -500,
                 "max": 1000,
                 "offset": 500,
                 "bits": 12,
                 "endianess": "big",
+                "signed": true,
                 "sig_start_val": 123
             }
         }

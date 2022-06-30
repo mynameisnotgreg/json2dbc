@@ -1,5 +1,5 @@
 {
-    "eggs": {
+    "SHARED_eggs": {
         "SUNNY_SIDE_UP": 0,
         "OVER_EASY": 1,
         "SCRAMBLED": 2,

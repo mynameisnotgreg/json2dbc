@@ -1,0 +1,19 @@
+{
+    "JANE_fish_egg_sandwich": {
+        "message_id": 110,
+        "signals": {
+            "fish": {
+                "enum": "JANE_fish"
+            },
+            "egg": {
+                "enum": "SHARED_eggs"
+            },
+            "sandwich": {
+                "resolution": 0.0025,
+                "max": 100,
+                "bits": 16,
+                "units": "%"
+            }
+        }
+    }
+}

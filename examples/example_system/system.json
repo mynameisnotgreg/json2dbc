@@ -1,6 +1,6 @@
 {
-    "bus_speed": 500,
     "default_receiver": "DEBUG",
+    "bus_speed": 500,
     "default_endianness": "little",
     "cycle_time_min": 0,
     "cycle_time_max": 65535,

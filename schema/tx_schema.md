@@ -40,14 +40,11 @@ Given the default fields there are two options of absolute minimum TX message de
 ```json
 {
     "message_name": {
-        ...
         "signals": {
             "signal_name_1": { // LEGAL
-                ...
                 "enum": "example_enum_1"
             },
             "signal_name_2": { // ILLEGAL
-                ...
                 "enum": "example_enum_2",
                 "min": 0,
                 "max": 3
@@ -59,23 +56,29 @@ Given the default fields there are two options of absolute minimum TX message de
 
 ## Other
 
-Can define (`min` and `max`) OR (`bits`), but not both:
+Can define (`min` and `max`) OR (`bits`), but not both. The following is legal:
 ```json
 {
     "message_name": {
-        ...
         "signals": {
-            "signal_name_1": { // LEGAL
-                ...
+            "signal_name_1": {
                 "min": 0,
                 "max": 1
             },
-            "signal_name_2": { // LEGAL
-                ...
+            "signal_name_2": {
                 "bits": 1
-            },
-            "signal_name_3": { // ILLEGAL
-                ...
+            }
+        }
+    }
+}
+```
+
+Whereas this is illegal:
+```json
+{
+    "message_name": {
+        "signals": {
+            "signal_name_3": {
                 "min": 0,
                 "max": 1,
                 "bits": 1
@@ -91,7 +94,6 @@ Generate `GenSigStartValue` and `GenMsgCycleTime` attributes for a message:
     "message_name": {
         "sig_start_val": 99,
         "cycle_time": 10,
-        ...
     }
 }
 ```
@@ -100,10 +102,8 @@ Units:
 ```json
 {
     "message_name": {
-        ...
         "signals": {
             "signal_name": {
-                ...
                 "units": "kW"
             }
         }

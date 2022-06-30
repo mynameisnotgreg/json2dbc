@@ -1,0 +1,46 @@
+VERSION "1.0"
+
+NS_:
+    BA_
+    BA_DEF_
+    BA_DEF_DEF_
+    BO_
+    BS_
+    BU_
+    VAL_
+    VAL_TABLE_
+
+BS_: 500
+
+BU_: DEBUG BOB JANE JOE
+
+BO_ 10 BOB_potato_salad: 3 JANE
+    SG_ potato : 0|16@1- (1,0) [-30000|30000] "P" JANE
+    SG_ salad : 16|3@1+ (1,0) [0|7] "" JANE
+
+BO_ 20 BOB_chicken_salad: 4 DEBUG
+    SG_ chicken : 0|14@1- (1,0) [-10|-3] "" DEBUG
+    SG_ egg : 14|3@1+ (1,0) [0|4] "" DEBUG
+    SG_ salad : 17|12@0- (0.25,-500) [-500|1000] "" DEBUG
+
+BO_ 110 JANE_fish_sandwich: 4 BOB
+    SG_ fish : 0|7@1+ (1,0) [0|1] "" BOB
+    SG_ egg : 7|3@1+ (1,0) [0|4] "" BOB
+    SG_ sandwich : 10|16@1+ (0.0025,0) [0|100] "%" BOB
+
+BA_DEF_ BO_ "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_ "GenSigStartValue" INT 0 2147483647;
+
+BA_DEF_DEF_ "GenMsgCycleTime" 0;
+BA_DEF_DEF_ "GenSigStartValue" 0;
+
+BA_ "GenSigStartValue" SG_ 20 salad 123;
+
+BA_ "GenMsgCycleTime" BO_ 20 10;
+
+VAL_TABLE_ JANE_fish 99 "MACKREL" 2 "TROUT" 1 "ALBACORE" 0 "SALMON" -1 "TUNA";
+VAL_TABLE_ SHARED_eggs 4 "OMELLETE" 3 "POACHED" 2 "SCRAMBLED" 1 "OVER_EASY" 0 "SUNNY_SIDE_UP";
+
+VAL_ 20 egg SHARED_eggs;
+VAL_ 110 fish JANE_fish;
+VAL_ 110 egg SHARED_eggs;

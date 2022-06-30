@@ -20,7 +20,8 @@
                 "bits": 14
             },
             "salad": {
-                "max": 100
+                "max": 100,
+                "endianness": "big"
             }
         }
     }

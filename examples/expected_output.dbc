@@ -1,10 +1,17 @@
 VERSION ""
 
-
 NS_ :
 
 BS_:
 
 BU_: DEBUG BOB JANE JOE
 
-BO_ 10 BOB_potato_salad: ?
+BO_ 10 BOB_potato_salad: 3 JANE
+    SG_ potato : 0|16@1+ (1,0) [-30000|30000] "P" JANE
+    SG_ salad : 16|3@1- (1,0) [0|7] "" DEBUG
+
+BA_DEF_ BO_  "GenMsgCycleTime" INT 0 65535;
+BA_DEF_ SG_  "GenSigStartValue" INT 0 2147483647;
+
+BA_DEF_DEF_  "GenMsgCycleTime" 0;
+BA_DEF_DEF_  "GenSigStartValue" 0;

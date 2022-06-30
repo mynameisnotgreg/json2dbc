@@ -5,3 +5,10 @@ Define the default receiver to handle the case where no receiver is defined for 
     "default_receiver": "DEBUG"
 }
 ```
+
+Define the default endianness to be `"little"` or `"big"`. This is `"little"` by default.
+```json
+{
+    "default_endianness": "little"
+}
+```

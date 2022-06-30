@@ -113,13 +113,26 @@ Generate `GenSigStartValue` and `GenMsgCycleTime` attributes for a message:
 }
 ```
 
-Units:
+Define units for a signal:
 ```json
 {
     "message_name": {
         "signals": {
             "signal_name": {
                 "units": "kW"
+            }
+        }
+    }
+}
+```
+
+Override default endianness - example where default endianness is `"little"`:
+```json
+{
+    "message_name": {
+        "signals": {
+            "signal_name": {
+                "endianness": "big"
             }
         }
     }
